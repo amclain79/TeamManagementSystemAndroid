@@ -2,8 +2,6 @@ package edu.uta.cse5324.team1.teammanagementsystemandroid;
 
 import androidx.appcompat.app.AppCompatActivity;
 import controller.CreateProjectController;
-import gateway.ProjectStateManager;
-import interactor.UserInteractor;
 import model.CreateProjectRequest;
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,9 +9,6 @@ import android.view.View;
 import android.widget.TextView;
 
 public class CreateProjectForm extends AppCompatActivity {
-
-    public static UserInteractor userInteractor = new UserInteractor(ProjectStateManager.getInstance());
-    public static CreateProjectController createProjectController = new CreateProjectController(userInteractor);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,11 +29,11 @@ public class CreateProjectForm extends AppCompatActivity {
         );
 
         try {
-            createProjectController.createProject(cpr);
+            Main.createProjectController.createProject(cpr);
             TestDataLoader.loadTestData();
 
             Intent login = new Intent(this, LoginForm.class);
-            login.putExtra("previous", "createProjectForm");
+            login.putExtra("previous", "CreateProjectForm");
             startActivity(login);
         } catch (CreateProjectController.InvalidNumberOfTeams e){
             Informer.inform("Invalid Number Of Teams", findViewById(R.id.createProjectLayout));

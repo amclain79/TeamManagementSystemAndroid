@@ -12,27 +12,22 @@ import android.widget.TextView;
 
 public class LoginForm extends AppCompatActivity {
 
-    public static String email;
-    public static PersonInteractor personInteractor =
-            new PersonInteractor(ProjectStateManager.getInstance());
-    public static LoginController loginController = new LoginController(personInteractor);
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_form_layout);
 
         String previous = getIntent().getExtras().getString("previous");
-        if(previous.equals("createProjectForm"))
+        if(previous.equals("CreateProjectForm"))
             Informer.inform("Project Created", findViewById(R.id.loginLayout));
     }
 
     public void login(View view){
         TextView emailTV = findViewById(R.id.email);
-        email = emailTV.getText().toString();
+        Main.email = emailTV.getText().toString();
 
         try {
-            Role role = loginController.login(email);
+            Role role = Main.loginController.login(Main.email);
 
             Intent next = null;
             switch(role){
@@ -51,6 +46,7 @@ public class LoginForm extends AppCompatActivity {
                 case MANAGER:
                     next = new Intent(this, ManagerMenuGUI.class);
             }
+            next.putExtra("previous", "LoginForm");
             startActivity(next);
         } catch (LoginController.InvalidEmail e){
             Informer.inform("Invalid Email", findViewById(R.id.loginLayout));

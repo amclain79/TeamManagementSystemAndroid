@@ -18,7 +18,9 @@ public class UserMenuGUI extends AppCompatActivity {
     }
 
     public void logout(View view){
-
+        Intent loginForm = new Intent(this, LoginForm.class);
+        loginForm.putExtra("previous", "UserMenuGUI");
+        startActivity(loginForm);
     }
 
     public void joinTeam(View view){

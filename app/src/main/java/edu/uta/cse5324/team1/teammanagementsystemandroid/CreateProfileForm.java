@@ -13,9 +13,6 @@ import android.widget.TextView;
 
 public class CreateProfileForm extends AppCompatActivity {
 
-    public static UserInteractor userInteractor = new UserInteractor(ProjectStateManager.getInstance());
-    public static CreateProfileController createProfileController = new CreateProfileController(userInteractor);
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,13 +29,13 @@ public class CreateProfileForm extends AppCompatActivity {
         String exp = expTV.getText().toString();
 
         CreateProfileRequest cpr = new CreateProfileRequest(
-                name, LoginForm.email, edu, exp
+                name, Main.email, edu, exp
         );
 
         try{
-            createProfileController.createProfile(cpr);
+            Main.createProfileController.createProfile(cpr);
             Intent userMenu = new Intent(this, UserMenuGUI.class);
-            userMenu.putExtra("previous", "createProfileForm");
+            userMenu.putExtra("previous", "CreateProfileForm");
             startActivity(userMenu);
         }catch (CreateProfileController.InvalidCreateProfileRequest e){
             Informer.inform("Invalid Create Profile Request", findViewById(R.id.createProfileLayout));
