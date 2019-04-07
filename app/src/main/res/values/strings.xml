@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Team Management System</string>
+    <string name="create_project_submit">Submit</string>
+    <string name="create_project_max_teams">Max Teams</string>
+    <string name="create_project_max_members">Max Team Members</string>
+    <string name="create_project_min_feedback">Min Weekly Feedback</string>
+    <string name="create_project_title">Create Project Form</string>
+    <string name="title_activity_login_form">LoginForm</string>
+    <string name="login_title">Login Form</string>
+    <string name="login_button">LOGIN</string>
+    <string name="login_label">Email:</string>
+    <string name="create_profile_title">Create Profile Form</string>
+    <string name="create_profile_name">Name:</string>
+    <string name="create_profile_edu">Education:</string>
+    <string name="create_profile_exp">Experience:</string>
+    <string name="user_menu_title">User Menu</string>
+    <string name="user_menu_join">Join Team</string>
+    <string name="user_menu_logout">Logout</string>
+    <string name="user_menu_create">Create Team</string>
+    <string name="create_team_title">Create Team Form</string>
+    <string name="create_team_name">Team Name:</string>
+    <string name="create_team_submit">Submit</string>
+    <string name="join_team_title">Open Teams</string>
+</resources>
