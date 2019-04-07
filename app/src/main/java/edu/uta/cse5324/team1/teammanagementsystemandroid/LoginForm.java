@@ -22,7 +22,9 @@ public class LoginForm extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_form_layout);
 
-        Informer.inform("Project Created", findViewById(R.id.loginLayout));
+        String previous = getIntent().getExtras().getString("previous");
+        if(previous.equals("createProjectForm"))
+            Informer.inform("Project Created", findViewById(R.id.loginLayout));
     }
 
     public void login(View view){
