@@ -11,6 +11,10 @@ public class UserMenuGUI extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.user_menu_gui_layout);
+
+        String previous = getIntent().getExtras().getString("previous");
+        if(previous.equals("createProfileForm"))
+            Informer.inform("Profile Created", findViewById(R.id.userMenuView));
     }
 
     public void logout(View view){

@@ -38,6 +38,7 @@ public class CreateProjectForm extends AppCompatActivity {
             TestDataLoader.loadTestData();
 
             Intent login = new Intent(this, LoginForm.class);
+            login.putExtra("previous", "createProjectForm");
             startActivity(login);
         } catch (CreateProjectController.InvalidNumberOfTeams e){
             Informer.inform("Invalid Number Of Teams", findViewById(R.id.createProjectLayout));
