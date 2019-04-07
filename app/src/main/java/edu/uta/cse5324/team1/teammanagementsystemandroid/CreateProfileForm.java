@@ -41,7 +41,7 @@ public class CreateProfileForm extends AppCompatActivity {
             userMenu.putExtra("previous", "createProfileForm");
             startActivity(userMenu);
         }catch (CreateProfileController.InvalidCreateProfileRequest e){
-            Informer.inform(e.getMessage(), findViewById(R.id.createProfileLayout));
+            Informer.inform("Invalid Create Profile Request", findViewById(R.id.createProfileLayout));
         }
     }
 }
