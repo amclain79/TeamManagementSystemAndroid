@@ -13,7 +13,7 @@ public class UserMenuGUI extends AppCompatActivity {
         setContentView(R.layout.user_menu_gui_layout);
 
         String previous = getIntent().getExtras().getString("previous");
-        if(previous.equals("createProfileForm"))
+        if(previous.equals("CreateProfileForm"))
             Informer.inform("Profile Created", findViewById(R.id.userMenuView));
     }
 
