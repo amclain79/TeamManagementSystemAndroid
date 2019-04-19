@@ -4,6 +4,7 @@ import android.app.Application;
 
 import controller.CreateProfileController;
 import controller.CreateProjectController;
+import controller.CreateTeamController;
 import controller.LoginController;
 import gateway.ProjectStateManager;
 import interactor.PersonInteractor;
@@ -19,4 +20,5 @@ public class Main extends Application {
     public static UserInteractor userInteractor = new UserInteractor(ProjectStateManager.getInstance());
     public static CreateProjectController createProjectController = new CreateProjectController(userInteractor);
     public static CreateProfileController createProfileController = new CreateProfileController(userInteractor);
+    public static CreateTeamController createTeamController = new CreateTeamController(userInteractor);
 }
