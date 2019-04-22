@@ -4,52 +4,57 @@
     android:layout_height="match_parent"
     android:layout_width="match_parent"
     android:fillViewport="true">
-
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/loginLayout"
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
-        android:id="@+id/userMenuView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context="User.UserMenuGUI">
+        tools:context="Person.LoginForm">
 
         <TextView
-            android:id="@+id/textView11"
+            android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:fontFamily="sans-serif-thin"
-            android:text="@string/user_menu_title"
+            android:text="@string/login_title"
             android:textSize="30sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
-            android:id="@+id/button4"
-            android:layout_width="0dp"
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
+            android:text="@string/login_label"
+            android:textStyle="bold"
+            app:layout_constraintBaseline_toBaselineOf="@+id/email"
+            app:layout_constraintEnd_toStartOf="@+id/email"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
-            android:background="@android:drawable/btn_default"
-            android:backgroundTint="@color/colorSubmit"
-            android:backgroundTintMode="screen"
-            android:fontFamily="sans-serif-thin"
-            android:onClick="createTeam"
-            android:text="@string/user_menu_create"
-            android:textSize="30sp"
-            android:textStyle="bold"
+            android:background="@android:drawable/edit_text"
+            android:ems="10"
+            android:inputType="textEmailAddress"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView11" />
+            app:layout_constraintStart_toEndOf="@+id/textView2"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
 
         <Button
-            android:id="@+id/button5"
+            android:id="@+id/button2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -59,31 +64,12 @@
             android:backgroundTint="@color/colorSubmit"
             android:backgroundTintMode="screen"
             android:fontFamily="sans-serif-thin"
-            android:onClick="joinTeam"
-            android:text="@string/user_menu_join"
+            android:onClick="login"
+            android:text="@string/login_button"
             android:textSize="30sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button4" />
-
-        <Button
-            android:id="@+id/button6"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            android:background="@android:drawable/btn_default"
-            android:backgroundTint="@color/colorSubmit"
-            android:backgroundTintMode="screen"
-            android:fontFamily="sans-serif-thin"
-            android:onClick="logout"
-            android:text="@string/user_menu_logout"
-            android:textSize="30sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button5" />
+            app:layout_constraintTop_toBottomOf="@+id/email" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

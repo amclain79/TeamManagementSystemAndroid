@@ -9,27 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ManagerMenuGUI" />
-        <activity android:name=".LeadMenuGUI" />
-        <activity android:name=".MemberMenuGUI" />
-        <activity android:name=".UserMenuGUI" />
-        <activity
-            android:name=".JoinTeamList"
-            android:parentActivityName=".UserMenu">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".UserMenu" />
-        </activity>
-        <activity
-            android:name=".CreateTeamForm"
-            android:parentActivityName=".UserMenu">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".UserMenu" />
-        </activity>
-        <activity android:name=".CreateProfileForm" />
-        <activity android:name=".LoginForm" />
-        <activity android:name=".CreateProjectForm">
+        <activity android:name="User.ProfileDisplayer"></activity>
+        <activity android:name="User.TeamMembersDisplayer" />
+        <activity android:name="Manager.ManagerMenuGUI" />
+        <activity android:name="Lead.LeadMenuGUI" />
+        <activity android:name="Member.MemberMenuGUI" />
+        <activity android:name="User.UserMenuGUI" />
+        <activity android:name="User.OpenTeamsDisplayer" />
+        <activity android:name="User.CreateTeamForm" />
+        <activity android:name="User.CreateProfileForm" />
+        <activity android:name="Person.LoginForm" />
+        <activity android:name="User.CreateProjectForm">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -20,5 +20,7 @@
     <string name="create_team_title">Create Team Form</string>
     <string name="create_team_name">Team Name:</string>
     <string name="create_team_submit">Submit</string>
-    <string name="join_team_title">Open Teams</string>
+    <string name="open_teams_displayer_title">Open Teams</string>
+    <string name="team_members_displayer_title">Team\'s Members</string>
+    <string name="profile_displayer_title">Member\'s Profile</string>
 </resources>
