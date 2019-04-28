@@ -1,5 +1,6 @@
 package TMS;
 
+import java.time.LocalDate;
 import java.util.Date;
 import entity.Profile;
 import entity.Project;
@@ -39,7 +40,7 @@ public class TestDataLoader {
 
     private static void createTeamFeedback(int t, Team team) {
         TeamFeedback teamFeedback = new TeamFeedback();
-        teamFeedback.date = new Date();
+        teamFeedback.date = LocalDate.now();
         teamFeedback.teamName = team.teamName;
         teamFeedback.feedback = "feedback" + t;
         psm.saveTeamFeedback(teamFeedback);
@@ -54,9 +55,8 @@ public class TestDataLoader {
 
     private static void createTeamTask(Team team, Profile lead) {
         TeamTask teamTask = new TeamTask();
-        teamTask.teamLeadEmail = lead.email;
         teamTask.teamName = team.teamName;
-        teamTask.dueDate = new Date();
+        teamTask.dueDate = LocalDate.now();
         teamTask.description = "Description";
         psm.saveTeamTask(teamTask);
     }
