@@ -9,7 +9,9 @@ import controller.CreateTeamController;
 import controller.JoinTeamController;
 import controller.LoginController;
 import controller.QueryController;
+import controller.ViewTeamTaskController;
 import gateway.ProjectStateManager;
+import interactor.LeadInteractor;
 import interactor.ManagerInteractor;
 import interactor.PersonInteractor;
 import interactor.UserInteractor;
@@ -32,4 +34,7 @@ public class Main extends Application {
     public static ManagerInteractor managerInteractor = new ManagerInteractor(ProjectStateManager.getInstance());
     public static AssignTeamTaskController assignTeamTaskController = new AssignTeamTaskController(managerInteractor);
 
+    //Lead
+    public static LeadInteractor leadInteractor = new LeadInteractor(ProjectStateManager.getInstance());
+    public static ViewTeamTaskController viewTeamTaskController = new ViewTeamTaskController(leadInteractor);
 }
