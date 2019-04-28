@@ -2,6 +2,7 @@ package TMS;
 
 import android.app.Application;
 
+import controller.AssignTeamTaskController;
 import controller.CreateProfileController;
 import controller.CreateProjectController;
 import controller.CreateTeamController;
@@ -9,6 +10,7 @@ import controller.JoinTeamController;
 import controller.LoginController;
 import controller.QueryController;
 import gateway.ProjectStateManager;
+import interactor.ManagerInteractor;
 import interactor.PersonInteractor;
 import interactor.UserInteractor;
 
@@ -25,4 +27,9 @@ public class Main extends Application {
     public static CreateTeamController createTeamController = new CreateTeamController(userInteractor);
     public static JoinTeamController joinTeamController = new JoinTeamController(userInteractor);
     public static QueryController queryController = new QueryController(userInteractor);
+
+    //Manager
+    public static ManagerInteractor managerInteractor = new ManagerInteractor(ProjectStateManager.getInstance());
+    public static AssignTeamTaskController assignTeamTaskController = new AssignTeamTaskController(managerInteractor);
+
 }

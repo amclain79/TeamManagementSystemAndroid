@@ -1,16 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_height="match_parent"
-    tools:context="Manager.ManagerMenuGUI">
+    android:layout_width="match_parent"
+    android:fillViewport="true">
 
-    <TextView
-        android:id="@+id/textView17"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Manager Menu"
-        tools:layout_editor_absoluteX="176dp"
-        tools:layout_editor_absoluteY="31dp" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/managerMenuView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="Manager.ManagerMenuGUI">
+
+        <TextView
+            android:id="@+id/managerMenuGUITitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="sans-serif-thin"
+            android:text="@string/manager_menu_title"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/assignTeamTaskButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@android:drawable/btn_default"
+            android:backgroundTint="@color/colorSubmit"
+            android:backgroundTintMode="screen"
+            android:fontFamily="sans-serif-thin"
+            android:onClick="assignTeamTask"
+            android:text="@string/manager_menu_assign_team_task"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/managerMenuGUITitle" />
+
+        <Button
+            android:id="@+id/assignTeamLeadButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@android:drawable/btn_default"
+            android:backgroundTint="@color/colorSubmit"
+            android:backgroundTintMode="screen"
+            android:fontFamily="sans-serif-thin"
+            android:onClick="assignTeamLead"
+            android:text="@string/manager_menu_assign_team_lead"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/assignTeamTaskButton" />
+
+        <Button
+            android:id="@+id/viewTeamFeedbackButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@android:drawable/btn_default"
+            android:backgroundTint="@color/colorSubmit"
+            android:backgroundTintMode="screen"
+            android:fontFamily="sans-serif-thin"
+            android:onClick="viewTeamFeedback"
+            android:text="@string/manager_menu_view_team_feedback"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/assignTeamLeadButton" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

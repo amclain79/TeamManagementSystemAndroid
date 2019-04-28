@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="User.ProfileDisplayer"></activity>
+        <activity android:name="Manager.AssignTeamTaskForm"></activity>
+        <activity android:name="Manager.ViewTeamFeedbackGUI" />
+        <activity android:name="Manager.AssignTeamLeadGUI" />
+        <activity android:name="Manager.AssignTeamTaskGUI" />
+        <activity android:name="User.ProfileDisplayer" />
         <activity android:name="User.TeamMembersDisplayer" />
         <activity android:name="Manager.ManagerMenuGUI" />
         <activity android:name="Lead.LeadMenuGUI" />

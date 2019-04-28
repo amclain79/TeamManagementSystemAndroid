@@ -23,4 +23,12 @@
     <string name="open_teams_displayer_title">Open Teams</string>
     <string name="team_members_displayer_title">Team\'s Members</string>
     <string name="profile_displayer_title">Member\'s Profile</string>
+    <string name="manager_menu_assign_team_task">Assign Team Task</string>
+    <string name="manager_menu_assign_team_lead">Assign Team Lead</string>
+    <string name="manager_menu_view_team_feedback">View Team Feedback</string>
+    <string name="manager_menu_title">Manager Menu</string>
+    <string name="assign_team_task_gui_title">Teams With Leads</string>
+    <string name="assign_team_task_form_title">Assign Team Task</string>
+    <string name="assign_team_task_description_label">Description</string>
+    <string name="assign_team_task_form_duration_label">Duration (days)</string>
 </resources>
