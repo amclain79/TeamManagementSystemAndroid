@@ -1,11 +1,9 @@
 package Manager;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-
 import TMS.Informer;
 import edu.uta.cse5324.team1.teammanagementsystemandroid.R;
 

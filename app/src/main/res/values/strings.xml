@@ -31,4 +31,10 @@
     <string name="assign_team_task_form_title">Assign Team Task</string>
     <string name="assign_team_task_description_label">Description</string>
     <string name="assign_team_task_form_duration_label">Duration (days)</string>
+    <string name="lead_menu_title">Lead Menu</string>
+    <string name="lead_menu_view_team_task">View Team Task</string>
+    <string name="lead_menu_create_team_feedback">Create Team Feedback</string>
+    <string name="lead_menu_assign_member_task">Assign Member Task</string>
+    <string name="lead_menu_view_member_feedback">View Member Feedback</string>
+    <string name="view_team_task_gui_title">View Team Task</string>
 </resources>
