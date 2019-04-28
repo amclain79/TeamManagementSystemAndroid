@@ -37,4 +37,14 @@
     <string name="lead_menu_assign_member_task">Assign Member Task</string>
     <string name="lead_menu_view_member_feedback">View Member Feedback</string>
     <string name="view_team_task_gui_title">View Team Task</string>
+    <string name="lead_menu_logout">Logout</string>
+    <string name="manager_menu_logout">Logout</string>
+    <string name="member_menu_title">Member Menu</string>
+    <string name="member_menu_view_profile">View Profile</string>
+    <string name="member_menu_nominate_team_lead">Nominate Team Lead</string>
+    <string name="member_menu_view_member_task">View Member Task</string>
+    <string name="member_menu_create_member_feedback">Create Member Feedback</string>
+    <string name="member_menu_logout">Logout</string>
+    <string name="nominate_team_lead_gui_title">Nominate Team Lead</string>
+    <string name="nominate_team_lead_candidate_gui_title">Candidate Profile</string>
 </resources>

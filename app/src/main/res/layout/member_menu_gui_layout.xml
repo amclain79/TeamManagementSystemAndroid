@@ -4,21 +4,125 @@
     android:layout_height="match_parent"
     android:layout_width="match_parent"
     android:fillViewport="true">
+
     <androidx.constraintlayout.widget.ConstraintLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
-        android:id="@+id/memberMenuView"
+        android:id="@+id/memberMenuGUILayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context="Member.MemberMenuGUI">
 
         <TextView
-            android:id="@+id/textView15"
+            android:id="@+id/memberMenuGUITitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Member Menu"
-            tools:layout_editor_absoluteX="176dp"
-            tools:layout_editor_absoluteY="37dp" />
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="sans-serif-thin"
+            android:text="@string/member_menu_title"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/nominateTeamLeadButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@android:drawable/btn_default"
+            android:backgroundTint="@color/colorSubmit"
+            android:backgroundTintMode="screen"
+            android:fontFamily="sans-serif-thin"
+            android:onClick="nominateTeamLead"
+            android:text="@string/member_menu_nominate_team_lead"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/memberMenuGUITitle" />
+
+        <Button
+            android:id="@+id/viewProfileButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@android:drawable/btn_default"
+            android:backgroundTint="@color/colorSubmit"
+            android:backgroundTintMode="screen"
+            android:fontFamily="sans-serif-thin"
+            android:onClick="viewProfile"
+            android:text="@string/member_menu_view_profile"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nominateTeamLeadButton" />
+
+        <Button
+            android:id="@+id/viewMemberTaskButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@android:drawable/btn_default"
+            android:backgroundTint="@color/colorSubmit"
+            android:backgroundTintMode="screen"
+            android:fontFamily="sans-serif-thin"
+            android:onClick="viewMemberTask"
+            android:text="@string/member_menu_view_member_task"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewProfileButton" />
+
+        <Button
+            android:id="@+id/createMemberFeedbackButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@android:drawable/btn_default"
+            android:backgroundTint="@color/colorSubmit"
+            android:backgroundTintMode="screen"
+            android:fontFamily="sans-serif-thin"
+            android:onClick="createMemberFeedback"
+            android:text="@string/member_menu_create_member_feedback"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewMemberTaskButton" />
+
+        <Button
+            android:id="@+id/memberMenuLogoutButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@android:drawable/btn_default"
+            android:backgroundTint="@color/colorSubmit"
+            android:backgroundTintMode="screen"
+            android:fontFamily="sans-serif-thin"
+            android:onClick="logout"
+            android:text="@string/member_menu_logout"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/createMemberFeedbackButton" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

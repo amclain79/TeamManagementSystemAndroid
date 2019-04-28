@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+
+import Person.LoginForm;
 import TMS.Informer;
 import edu.uta.cse5324.team1.teammanagementsystemandroid.R;
 
@@ -33,5 +35,11 @@ public class ManagerMenuGUI extends AppCompatActivity {
     public void viewTeamFeedback(View view){
         Intent viewTeamFeedbackForm = new Intent(this, ViewTeamFeedbackGUI.class);
         startActivity(viewTeamFeedbackForm);
+    }
+
+    public void logout(View view){
+        Intent loginForm = new Intent(this, LoginForm.class);
+        loginForm.putExtra("previous", "ManagerMenuGUI");
+        startActivity(loginForm);
     }
 }
