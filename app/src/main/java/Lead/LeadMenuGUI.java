@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import Person.LoginForm;
 import edu.uta.cse5324.team1.teammanagementsystemandroid.R;
 
 public class LeadMenuGUI extends AppCompatActivity {
@@ -34,5 +35,11 @@ public class LeadMenuGUI extends AppCompatActivity {
     public void viewMemberFeedback(View view){
         Intent viewMemberFeedback = new Intent(this, ViewMemberFeedbackGUI.class);
         startActivity(viewMemberFeedback);
+    }
+
+    public void logout(View view){
+        Intent loginForm = new Intent(this, LoginForm.class);
+        loginForm.putExtra("previous", "LeadMenuGUI");
+        startActivity(loginForm);
     }
 }
