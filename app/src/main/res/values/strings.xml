@@ -60,4 +60,7 @@
     <string name="assign_member_task_description_label">Description</string>
     <string name="assign_member_task_form_duration_label">Duration (days)</string>
     <string name="view_member_task_gui_title">Member Task</string>
+    <string name="create_team_feedback_gui_feedback_label">Feedback</string>
+    <string name="create_member_feedback_gui_title">Member Feedback Form</string>
+    <string name="create_member_feedback_gui_feedback_label">Feedback</string>
 </resources>

@@ -2,9 +2,11 @@ package TMS;
 
 import android.app.Application;
 
+import Member.CreateMemberFeedbackGUI;
 import controller.AssignMemberTaskController;
 import controller.AssignTeamLeadController;
 import controller.AssignTeamTaskController;
+import controller.CreateMemberFeedbackController;
 import controller.CreateProfileController;
 import controller.CreateProjectController;
 import controller.CreateTeamController;
@@ -55,4 +57,5 @@ public class Main extends Application {
     public static NominateLeadController nominateLeadController = new NominateLeadController(memberInteractor);
     public static ViewProfileController viewProfileController = new ViewProfileController(memberInteractor);
     public static ViewMemberTaskController viewMemberTaskController = new ViewMemberTaskController(memberInteractor);
+    public static CreateMemberFeedbackController createMemberFeedbackController = new CreateMemberFeedbackController(memberInteractor);
 }

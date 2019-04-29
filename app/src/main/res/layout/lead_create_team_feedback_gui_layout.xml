@@ -8,7 +8,7 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
-        android:id="@+id/assignTeamTaskFormLayout"
+        android:id="@+id/createTeamFeedbackGUILayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context="Lead.CreateTeamFeedbackGUI">
@@ -35,7 +35,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginBottom="16dp"
-            android:text="@string/create_team_feedback_gui_label"
+            android:text="@string/create_team_feedback_gui_feedback_label"
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/createTeamFeedbackGUIFeedback"
