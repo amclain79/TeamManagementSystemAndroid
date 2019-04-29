@@ -23,10 +23,13 @@ public class MemberMenuGUI extends AppCompatActivity {
 
         String previous = getIntent().getExtras().getString("previous");
         if(previous.equals("CreateTeamForm")) {
-            Informer.inform("Team Created. Member Added.", findViewById(R.id.memberMenuGUILayout));
+            Informer.inform("Team Created, Member Added", findViewById(R.id.memberMenuGUILayout));
         }
         if(previous.equals("NominateTeamLeadCandidateGUI")) {
-            Informer.inform("Member Nominated.", findViewById(R.id.memberMenuGUILayout));
+            Informer.inform("Member Nominated", findViewById(R.id.memberMenuGUILayout));
+        }
+        if(previous.equals("CreateMemberFeedbackGUI")) {
+            Informer.inform("Member Feedback Created", findViewById(R.id.memberMenuGUILayout));
         }
     }
 
