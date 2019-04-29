@@ -28,7 +28,7 @@ public class AssignTeamTaskForm extends AppCompatActivity {
         int chosenTeamIndex = getIntent().getExtras().getInt("chosenTeamIndex");
         final Team chosenTeam = teamsWithLeads.get(chosenTeamIndex);
 
-        TextView titleTV = (TextView)findViewById(R.id.createTeamFeedbackGUITitle);
+        TextView titleTV = (TextView)findViewById(R.id.assignTeamTaskFormTitle);
         titleTV.setText(String.format("Assign %s Task", chosenTeam.teamName));
     }
 
@@ -41,9 +41,7 @@ public class AssignTeamTaskForm extends AppCompatActivity {
 
         TextView descriptionTV = findViewById(R.id.assignTeamTaskDescription);
         String description = descriptionTV.getText().toString();
-        TextView durationTV = findViewById(R.id.createTeamFeedbackGUIFeedback);
-
-
+        TextView durationTV = findViewById(R.id.assignTeamTaskDuration);
 
         try {
             int duration = Integer.parseInt(durationTV.getText().toString());

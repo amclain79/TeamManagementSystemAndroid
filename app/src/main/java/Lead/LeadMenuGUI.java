@@ -23,6 +23,9 @@ public class LeadMenuGUI extends AppCompatActivity {
         if(previous.equals("CreateTeamFeedbackGUI")){
             Informer.inform("Team Feedback Created", findViewById(R.id.leadMenuGUILayout));
         }
+        if(previous.equals("AssignMemberTaskForm")){
+            Informer.inform("Member Task Assigned", findViewById(R.id.leadMenuGUILayout));
+        }
     }
 
     public void viewTeamTask(View view){

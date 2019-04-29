@@ -10,20 +10,20 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
-        android:id="@+id/assignTeamTaskFormLayout"
+        android:id="@+id/assignMemberTaskFormLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context="Manager.AssignTeamTaskForm">
+        tools:context="Lead.AssignMemberTaskForm">
 
         <TextView
-            android:id="@+id/assignTeamTaskFormTitle"
+            android:id="@+id/assignMemberTaskFormTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:fontFamily="sans-serif-thin"
-            android:text="@string/assign_team_task_form_title"
+            android:text="@string/assign_member_task_form_title"
             android:textAlignment="center"
             android:textSize="30sp"
             android:textStyle="bold"
@@ -32,7 +32,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/assignTeamTaskDescription"
+            android:id="@+id/assignMemberTaskDescription"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -41,35 +41,35 @@
             android:ems="10"
             android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/assignTeamTaskDescriptionLabel"
-            app:layout_constraintTop_toBottomOf="@+id/assignTeamTaskFormTitle" />
+            app:layout_constraintStart_toEndOf="@+id/assignMemberTaskDescriptionLabel"
+            app:layout_constraintTop_toBottomOf="@+id/assignMemberTaskFormTitle" />
 
         <TextView
-            android:id="@+id/assignTeamTaskDescriptionLabel"
+            android:id="@+id/assignMemberTaskDescriptionLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginBottom="16dp"
-            android:text="@string/assign_team_task_description_label"
+            android:text="@string/assign_member_task_description_label"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/assignTeamTaskDescription"
+            app:layout_constraintBottom_toBottomOf="@+id/assignMemberTaskDescription"
             app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
-            android:id="@+id/assignTeamTaskDurationLabel"
+            android:id="@+id/assignMemberTaskDurationLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginBottom="16dp"
-            android:text="@string/assign_team_task_form_duration_label"
+            android:text="@string/assign_member_task_form_duration_label"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/assignTeamTaskDuration"
+            app:layout_constraintBottom_toBottomOf="@+id/assignMemberTaskDuration"
             app:layout_constraintStart_toStartOf="parent" />
 
         <EditText
-            android:id="@+id/assignTeamTaskDuration"
+            android:id="@+id/assignMemberTaskDuration"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -78,11 +78,11 @@
             android:ems="10"
             android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/assignTeamTaskDurationLabel"
-            app:layout_constraintTop_toBottomOf="@+id/assignTeamTaskDescription" />
+            app:layout_constraintStart_toEndOf="@+id/assignMemberTaskDurationLabel"
+            app:layout_constraintTop_toBottomOf="@+id/assignMemberTaskDescription" />
 
         <Button
-            android:id="@+id/assignTeamTaskFormSubmit"
+            android:id="@+id/assignMemberTaskFormSubmit"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -95,6 +95,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/assignTeamTaskDurationLabel" />
+            app:layout_constraintTop_toBottomOf="@+id/assignMemberTaskDurationLabel" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
