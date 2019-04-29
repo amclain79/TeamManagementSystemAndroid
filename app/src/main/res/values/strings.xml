@@ -63,4 +63,6 @@
     <string name="create_team_feedback_gui_feedback_label">Feedback</string>
     <string name="create_member_feedback_gui_title">Member Feedback Form</string>
     <string name="create_member_feedback_gui_feedback_label">Feedback</string>
+    <string name="view_member_feedback_gui_title">Members</string>
+    <string name="view_member_feedback_gui_feedback_title">Member Feedback</string>
 </resources>
