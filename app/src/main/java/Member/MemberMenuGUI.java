@@ -11,6 +11,7 @@ import Person.LoginForm;
 import TMS.Informer;
 import TMS.Main;
 import edu.uta.cse5324.team1.teammanagementsystemandroid.R;
+import entity.MemberTask;
 import entity.Profile;
 
 public class MemberMenuGUI extends AppCompatActivity {
@@ -49,8 +50,13 @@ public class MemberMenuGUI extends AppCompatActivity {
     }
 
     public void viewMemberTask(View view){
-        Intent viewMemberTask = new Intent(this, ViewMemberTaskGUI.class);
-        startActivity(viewMemberTask);
+        MemberTask memberTask = Main.viewMemberTaskController.viewMemberTask(Main.email);
+        if(memberTask == null){
+            Informer.inform("No Task Assigned", findViewById(R.id.memberMenuGUILayout));
+        } else {
+            Intent viewMemberTask = new Intent(this, ViewMemberTaskGUI.class);
+            startActivity(viewMemberTask);
+        }
     }
 
     public void createMemberFeedback(View view){

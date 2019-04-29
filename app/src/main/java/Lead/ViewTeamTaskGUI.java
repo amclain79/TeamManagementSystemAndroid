@@ -1,13 +1,10 @@
 package Lead;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Intent;
 import android.os.Bundle;
 import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
 import android.widget.TextView;
-
 import TMS.Informer;
 import TMS.Main;
 import edu.uta.cse5324.team1.teammanagementsystemandroid.R;
