@@ -12,6 +12,7 @@ import controller.JoinTeamController;
 import controller.LoginController;
 import controller.NominateLeadController;
 import controller.QueryController;
+import controller.ViewProfileController;
 import controller.ViewTeamFeedbacksController;
 import controller.ViewTeamTaskController;
 import gateway.ProjectStateManager;
@@ -49,4 +50,5 @@ public class Main extends Application {
     //Member
     public static MemberInteractor memberInteractor = new MemberInteractor(ProjectStateManager.getInstance());
     public static NominateLeadController nominateLeadController = new NominateLeadController(memberInteractor);
+    public static ViewProfileController viewProfileController = new ViewProfileController(memberInteractor);
 }
