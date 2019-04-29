@@ -2,6 +2,7 @@ package TMS;
 
 import android.app.Application;
 
+import controller.AssignMemberTaskController;
 import controller.AssignTeamLeadController;
 import controller.AssignTeamTaskController;
 import controller.CreateProfileController;
@@ -46,6 +47,7 @@ public class Main extends Application {
     public static LeadInteractor leadInteractor = new LeadInteractor(ProjectStateManager.getInstance());
     public static ViewTeamTaskController viewTeamTaskController = new ViewTeamTaskController(leadInteractor);
     public static CreateTeamFeedbackController createTeamFeedbackController = new CreateTeamFeedbackController(leadInteractor);
+    public static AssignMemberTaskController assignMemberTaskController = new AssignMemberTaskController(leadInteractor);
 
     //Member
     public static MemberInteractor memberInteractor = new MemberInteractor(ProjectStateManager.getInstance());

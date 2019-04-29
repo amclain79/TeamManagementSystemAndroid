@@ -55,4 +55,8 @@
     <string name="view_team_feedback_gui_title">Teams With Feedback</string>
     <string name="view_team_feedback_gui_feedback_title">Team Feedback</string>
     <string name="view_profile_gui_title">Profile</string>
+    <string name="assign_member_task_gui_title">Members</string>
+    <string name="assign_member_task_form_title">Assign Task Form</string>
+    <string name="assign_member_task_description_label">Description</string>
+    <string name="assign_member_task_form_duration_label">Duration (days)</string>
 </resources>
