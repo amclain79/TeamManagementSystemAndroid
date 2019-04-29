@@ -54,4 +54,5 @@
     <string name="create_team_feedback_gui_label">Team Feedback</string>
     <string name="view_team_feedback_gui_title">Teams With Feedback</string>
     <string name="view_team_feedback_gui_feedback_title">Team Feedback</string>
+    <string name="view_profile_gui_title">Profile</string>
 </resources>
