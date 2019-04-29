@@ -59,4 +59,5 @@
     <string name="assign_member_task_form_title">Assign Task Form</string>
     <string name="assign_member_task_description_label">Description</string>
     <string name="assign_member_task_form_duration_label">Duration (days)</string>
+    <string name="view_member_task_gui_title">Member Task</string>
 </resources>
