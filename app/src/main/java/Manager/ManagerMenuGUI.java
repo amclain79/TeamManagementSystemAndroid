@@ -5,9 +5,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import java.util.List;
+import java.util.concurrent.ConcurrentHashMap;
+
 import Person.LoginForm;
 import TMS.Informer;
+import TMS.Main;
 import edu.uta.cse5324.team1.teammanagementsystemandroid.R;
+import entity.Profile;
 
 public class ManagerMenuGUI extends AppCompatActivity {
 
@@ -20,6 +25,9 @@ public class ManagerMenuGUI extends AppCompatActivity {
         if(previous.equals("AssignTeamTask")) {
             Informer.inform("Team Task Assigned", findViewById(R.id.managerMenuView));
         }
+        if(previous.equals("AssignTeamLeadProfileGUI")){
+            Informer.inform("Team Lead Assigned", findViewById(R.id.managerMenuView));
+        }
     }
 
     public void assignTeamTask(View view){
@@ -28,8 +36,13 @@ public class ManagerMenuGUI extends AppCompatActivity {
     }
 
     public void assignTeamLead(View view){
-        Intent assignTeamLeadForm = new Intent(this, AssignTeamLeadGUI.class);
-        startActivity(assignTeamLeadForm);
+        ConcurrentHashMap<String, List<Profile>> nomineeProfilesByTeam = Main.assignTeamLeadController.getNomineeProfilesByTeam();
+        if(nomineeProfilesByTeam.size() > 0) {
+            Intent assignTeamLeadForm = new Intent(this, AssignTeamLeadGUI.class);
+            startActivity(assignTeamLeadForm);
+        }else{
+            Informer.inform("No Nominations", findViewById(R.id.managerMenuView));
+        }
     }
 
     public void viewTeamFeedback(View view){

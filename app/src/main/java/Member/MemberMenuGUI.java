@@ -4,10 +4,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+
+import java.util.List;
+
 import Person.LoginForm;
 import TMS.Informer;
 import TMS.Main;
 import edu.uta.cse5324.team1.teammanagementsystemandroid.R;
+import entity.Profile;
 
 public class MemberMenuGUI extends AppCompatActivity {
 
@@ -29,8 +33,13 @@ public class MemberMenuGUI extends AppCompatActivity {
         if(Main.nominateLeadController.getTeam(Main.email).hasLead()) {
             Informer.inform("Team Lead Assigned", findViewById(R.id.memberMenuGUILayout));
         } else {
-            Intent nominateTeamLead = new Intent(this, NominateTeamLeadGUI.class);
-            startActivity(nominateTeamLead);
+            List<Profile> candidates = Main.nominateLeadController.getCandidateProfiles(Main.email);
+            if(candidates.size() > 0) {
+                Intent nominateTeamLead = new Intent(this, NominateTeamLeadGUI.class);
+                startActivity(nominateTeamLead);
+            } else {
+                Informer.inform("No Candidates", findViewById(R.id.memberMenuGUILayout));
+            }
         }
     }
 

@@ -25,14 +25,10 @@ public class ViewTeamTaskGUI extends AppCompatActivity {
 
         try{
             TeamTask teamTask = Main.viewTeamTaskController.viewTeamTask(Main.email);
-            if(teamTask == null){
-                Informer.inform("No Task Assigned", findViewById(R.id.viewTeamTaskGUILayout));
-            } else {
-                TextView teamTaskTV = new TextView(this);
-                teamTaskTV.setText(teamTask.toString());
-                teamTaskTV.setTextSize(24.0f);
-                ll.addView(teamTaskTV, lp);
-            }
+            TextView teamTaskTV = new TextView(this);
+            teamTaskTV.setText(teamTask.toString());
+            teamTaskTV.setTextSize(24.0f);
+            ll.addView(teamTaskTV, lp);
         } catch (RuntimeException e) {
             Informer.inform("Error Getting Task", findViewById(R.id.viewTeamTaskGUILayout));
         }

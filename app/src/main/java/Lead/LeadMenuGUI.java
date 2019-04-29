@@ -7,7 +7,10 @@ import android.os.Bundle;
 import android.view.View;
 
 import Person.LoginForm;
+import TMS.Informer;
+import TMS.Main;
 import edu.uta.cse5324.team1.teammanagementsystemandroid.R;
+import entity.TeamTask;
 
 public class LeadMenuGUI extends AppCompatActivity {
 
@@ -18,8 +21,13 @@ public class LeadMenuGUI extends AppCompatActivity {
     }
 
     public void viewTeamTask(View view){
-        Intent viewTeamTask = new Intent(this, ViewTeamTaskGUI.class);
-        startActivity(viewTeamTask);
+        TeamTask teamTask = Main.viewTeamTaskController.viewTeamTask(Main.email);
+        if(teamTask == null){
+            Informer.inform("No Task Assigned", findViewById(R.id.leadMenuGUILayout));
+        } else {
+            Intent viewTeamTask = new Intent(this, ViewTeamTaskGUI.class);
+            startActivity(viewTeamTask);
+        }
     }
 
     public void createTeamFeedback(View view){

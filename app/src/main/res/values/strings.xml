@@ -47,4 +47,7 @@
     <string name="member_menu_logout">Logout</string>
     <string name="nominate_team_lead_gui_title">Nominate Team Lead</string>
     <string name="nominate_team_lead_candidate_gui_title">Candidate Profile</string>
+    <string name="assign_team_lead_gui_title">Teams With Nominations</string>
+    <string name="assign_team_lead_profiles_gui_title">Team Nominees</string>
+    <string name="assign_team_lead_profile_gui_title">Nominee Profile</string>
 </resources>
