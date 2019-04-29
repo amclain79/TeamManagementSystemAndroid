@@ -13,6 +13,7 @@ import TMS.Informer;
 import TMS.Main;
 import edu.uta.cse5324.team1.teammanagementsystemandroid.R;
 import entity.Profile;
+import entity.TeamFeedback;
 
 public class ManagerMenuGUI extends AppCompatActivity {
 
@@ -46,8 +47,13 @@ public class ManagerMenuGUI extends AppCompatActivity {
     }
 
     public void viewTeamFeedback(View view){
-        Intent viewTeamFeedbackForm = new Intent(this, ViewTeamFeedbackGUI.class);
-        startActivity(viewTeamFeedbackForm);
+        ConcurrentHashMap<String, TeamFeedback> teamFeedbacks = Main.viewTeamFeedbacksController.viewTeamFeedbacks();
+        if(teamFeedbacks.size() > 0 ) {
+            Intent viewTeamFeedbackForm = new Intent(this, ViewTeamFeedbackGUI.class);
+            startActivity(viewTeamFeedbackForm);
+        } else {
+            Informer.inform("No Feedbacks", findViewById(R.id.managerMenuView));
+        }
     }
 
     public void logout(View view){
