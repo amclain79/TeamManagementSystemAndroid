@@ -14,7 +14,7 @@
         tools:context="Manager.AssignTeamTaskForm">
 
         <TextView
-            android:id="@+id/assignTeamTaskFormTitle"
+            android:id="@+id/createTeamFeedbackGUITitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -40,7 +40,7 @@
             android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/textView18"
-            app:layout_constraintTop_toBottomOf="@+id/assignTeamTaskFormTitle" />
+            app:layout_constraintTop_toBottomOf="@+id/createTeamFeedbackGUITitle" />
 
         <TextView
             android:id="@+id/textView18"
@@ -55,7 +55,7 @@
             app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
-            android:id="@+id/assignTeamTaskFormDurationLabel"
+            android:id="@+id/createTeamFeedbackGUIFeedbackLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -63,11 +63,11 @@
             android:text="@string/assign_team_task_form_duration_label"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/assignTeamTaskFormDuration"
+            app:layout_constraintBottom_toBottomOf="@+id/createTeamFeedbackGUIFeedback"
             app:layout_constraintStart_toStartOf="parent" />
 
         <EditText
-            android:id="@+id/assignTeamTaskFormDuration"
+            android:id="@+id/createTeamFeedbackGUIFeedback"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -76,7 +76,7 @@
             android:ems="10"
             android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/assignTeamTaskFormDurationLabel"
+            app:layout_constraintStart_toEndOf="@+id/createTeamFeedbackGUIFeedbackLabel"
             app:layout_constraintTop_toBottomOf="@+id/assignTeamTaskDescription" />
 
         <Button
@@ -92,6 +92,6 @@
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/assignTeamTaskFormDuration" />
+            app:layout_constraintTop_toBottomOf="@+id/createTeamFeedbackGUIFeedback" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

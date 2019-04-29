@@ -18,6 +18,11 @@ public class LeadMenuGUI extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.lead_menu_gui_layout);
+
+        String previous = getIntent().getExtras().getString("previous");
+        if(previous.equals("CreateTeamFeedbackGUI")){
+            Informer.inform("Team Feedback Created", findViewById(R.id.leadMenuGUILayout));
+        }
     }
 
     public void viewTeamTask(View view){

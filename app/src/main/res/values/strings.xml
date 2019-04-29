@@ -50,4 +50,6 @@
     <string name="assign_team_lead_gui_title">Teams With Nominations</string>
     <string name="assign_team_lead_profiles_gui_title">Team Nominees</string>
     <string name="assign_team_lead_profile_gui_title">Nominee Profile</string>
+    <string name="create_team_feedback_gui_title">Team Feedback Form</string>
+    <string name="create_team_feedback_gui_label">Team Feedback</string>
 </resources>
