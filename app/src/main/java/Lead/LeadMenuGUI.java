@@ -6,10 +6,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import java.util.concurrent.ConcurrentHashMap;
+
 import Person.LoginForm;
 import TMS.Informer;
 import TMS.Main;
 import edu.uta.cse5324.team1.teammanagementsystemandroid.R;
+import entity.MemberFeedback;
+import entity.Profile;
 import entity.TeamTask;
 
 public class LeadMenuGUI extends AppCompatActivity {
@@ -49,8 +53,13 @@ public class LeadMenuGUI extends AppCompatActivity {
     }
 
     public void viewMemberFeedback(View view){
-        Intent viewMemberFeedback = new Intent(this, ViewMemberFeedbackGUI.class);
-        startActivity(viewMemberFeedback);
+        ConcurrentHashMap<String, MemberFeedback> feedbacks = Main.viewMemberFeedbackController.viewMemberFeedback(Main.email);
+        if(feedbacks.size() > 0 ) {
+            Intent viewMemberFeedback = new Intent(this, ViewMemberFeedbackGUI.class);
+            startActivity(viewMemberFeedback);
+        } else {
+            Informer.inform("No Feedbacks", findViewById(R.id.leadMenuGUILayout));
+        }
     }
 
     public void logout(View view){

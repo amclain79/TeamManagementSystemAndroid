@@ -15,6 +15,7 @@ import controller.JoinTeamController;
 import controller.LoginController;
 import controller.NominateLeadController;
 import controller.QueryController;
+import controller.ViewMemberFeedbackController;
 import controller.ViewMemberTaskController;
 import controller.ViewProfileController;
 import controller.ViewTeamFeedbacksController;
@@ -51,6 +52,7 @@ public class Main extends Application {
     public static ViewTeamTaskController viewTeamTaskController = new ViewTeamTaskController(leadInteractor);
     public static CreateTeamFeedbackController createTeamFeedbackController = new CreateTeamFeedbackController(leadInteractor);
     public static AssignMemberTaskController assignMemberTaskController = new AssignMemberTaskController(leadInteractor);
+    public static ViewMemberFeedbackController viewMemberFeedbackController = new ViewMemberFeedbackController(leadInteractor);
 
     //Member
     public static MemberInteractor memberInteractor = new MemberInteractor(ProjectStateManager.getInstance());
